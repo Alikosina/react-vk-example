@@ -1,7 +1,5 @@
 import React from "react";
-import { FaHeart } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import ImageZoom from "react-medium-image-zoom";
+import PhotoItem from "./PhotoItem";
 
 const style = {
   width: 400,
@@ -22,37 +20,46 @@ export default class AlbumGroup extends React.Component {
         );
         let commentsArr = comments.map(c => <div key={c.pid}>{c.text}</div>);
         return (
-          <div key={id} className="album-group__item">
-            <div className="album-group__item__img">
-              <ImageZoom
-                image={{
-                  src: photo_130,
-                  alt: "Golden Gate Bridge",
-                  className: "img",
-                  width: "130px"
-                }}
-                zoomImage={{
-                  src: photo_807,
-                  alt: "Golden Gate Bridge"
-                }}
-              />
-            </div>
-            <div className="album-group__item__descr">
-              {commentsArr}
-              <FaHeart />
-              {likes.count}
-            </div>
-          </div>
+          // <IconContext.Provider
+          //   value={{ color: "red", className: "photo-like" }}
+          // >
+          //   <div key={id} className="album-group__item">
+          //     <div className="album-group__item__img">
+          //       <ImageZoom
+          //         image={{
+          //           src: photo_130,
+          //           alt: "Golden Gate Bridge",
+          //           className: "img",
+          //           width: "130px"
+          //         }}
+          //         zoomImage={{
+          //           src: photo_807,
+          //           alt: "Golden Gate Bridge"
+          //         }}
+          //       />
+          //     </div>
+          //     <div className="album-group__item__descr">
+          //       {commentsArr}
+          //       <FaHeart />
+          //       {likes.count}
+          //     </div>
+          //   </div>
+          // </IconContext.Provider>
+          <PhotoItem
+            key={id}
+            likesCount={likes.count}
+            commentsArr={commentsArr}
+            minPhoto={photo_130}
+            maxPhoto={photo_807}
+          />
         );
       }
     );
     return (
-      <IconContext.Provider value={{ color: "red", className: "photo-like" }}>
-        <div class="album-group">
-          <h2>{this.props.title}</h2>
-          <div className="album-group__container">{photosList}</div>
-        </div>
-      </IconContext.Provider>
+      <div class="album-group">
+        <h2>{this.props.title}</h2>
+        <div className="album-group__container">{photosList}</div>
+      </div>
     );
   }
 }
