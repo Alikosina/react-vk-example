@@ -37,8 +37,6 @@
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-icons": "^3.0.5",
-    "react-image-viewer": "^0.1.0",
-    "react-loader-spinner": "^2.0.5",
     "react-medium-image-zoom": "^3.0.13",
     "react-spinners": "^0.4.5"
   }
