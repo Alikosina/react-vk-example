@@ -1,0 +1,45 @@
+{
+  "name": "reactvkproject",
+  "version": "1.0.0",
+  "description": "Vk React Webpack Babel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "A. Sloyan",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "fetch-jsonp": "^1.1.3",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.3",
+    "react-emotions": "^1.0.1",
+    "react-style-proptype": "^3.2.2",
+    "react-tap-event-plugin": "^3.0.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  },
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-icons": "^3.0.5",
+    "react-image-viewer": "^0.1.0",
+    "react-loader-spinner": "^2.0.5",
+    "react-medium-image-zoom": "^3.0.13",
+    "react-spinners": "^0.4.5"
+  }
+}
